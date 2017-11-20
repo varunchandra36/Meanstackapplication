@@ -44,7 +44,7 @@ const todo=require('./routes/todos');
 app.use(cors());
 
 //Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'mean-stack-application/dist/')));
 
 //bodyParser Middleware
 app.use(bodyParser.json());
@@ -66,7 +66,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, 'mean-stack-application/dist/index.html'));
 });
 
 io.on('connection', function(socket) {
