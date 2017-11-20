@@ -1,11 +1,11 @@
 .site-sidebar {
-  top: 0;
+  top:10%;
   bottom: 0;
   left: 0;
   position: fixed;
   overflow: hidden;
   z-index: 2;
-  width: 25%;
+width:15%;
   font-size: 14px;
   padding: 45px 40px;
   color: #fff;
@@ -29,7 +29,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    right: -50px;
+
     content: " ";
     display: block;
     background-size: cover;

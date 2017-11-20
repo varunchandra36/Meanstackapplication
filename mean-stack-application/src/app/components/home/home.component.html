@@ -1,8 +1,33 @@
 <div class="jumbotron text-center">
-  <h1>A demo Application</h1>
-
+  <h1>MY-Book - A MEAN Stack App</h1>
+  <p class="lead">Welcome to MY-BOOK Mean Stack App</p>
   <div>
+    <a *ngIf="!authService.loggedIn()" class="btn btn-success" [routerLink] = "['/register']">Register</a>
+    <a *ngIf="!authService.loggedIn()" class="btn btn-success" [routerLink] = "['/login']">Login</a>
+  </div>
+</div>
 
+<div class="row">
+
+  <div class="col-md-3">
+    <img class="img-responsive center-block" src="../../assets/angular.jpg" style="height: 100px;width: 100px">
+    <h3 style="padding-left: 30px">Angular-CLI</h3>
+    <p>The Angular CLI is a tool to initialize, develop, scaffold and maintain Angular applications</p>
+  </div>
+  <div class="col-md-3 card">
+    <img class="img-responsive center-block" src="../../assets/nodejs-express-mongo.jpg" style="height: 100px;width: 100px">
+    <h3 style="padding-left: 30px">NODE Backend</h3>
+    <p>Node.js/Express server is used with Mongoose to organize models and query the Database</p>
+  </div>
+  <div class="col-md-3">
+    <img class="img-responsive center-block" src="../../assets/passport.png" style="height: 100px;width: 100px">
+    <h3 style="padding-left: 30px">JWT Tokens</h3>
+    <p>Fully featured authentication using JSON web tokens. Login and stores user data through given expire time </p>
+  </div>
+  <div class="col-md-3">
+    <img class="img-responsive center-block" src="../../assets/mLab-logo.jpg" style="height: 100px;width: 100px">
+    <h3 style="padding-left: 30px">mLab </h3>
+    <p>Real-Time NoSQL is hosted on mLab which is a fully managed cloud database service that hosts MongoDB databases</p>
   </div>
 </div>
 
