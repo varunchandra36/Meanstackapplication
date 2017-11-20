@@ -21,7 +21,7 @@ export class TodoService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     const url = 'http://localhost:4000/todos/addtodo';
-    return this.http.post(url, todo,{headers}).map(res => res.json());
+    return this.http.post('/todos/addtodo', todo,{headers}).map(res => res.json());
   }
   getTodo() {
     console.log("gettodo");
@@ -30,7 +30,7 @@ export class TodoService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     const url = 'http://localhost:4000/todos/todo';
-    return this.http.get(url,{headers}).map(res => res.json());
+    return this.http.get('/todos/todo',{headers}).map(res => res.json());
   }
   loadToken() {
     const token = localStorage.getItem('id_token');
@@ -50,7 +50,7 @@ completeTodo(todos) {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     const url = 'http://localhost:4000/todos/';
-    return this.http.delete(url + todos._id ,{headers}).map(res => res.json());
+    return this.http.delete('/todos/' + todos._id ,{headers}).map(res => res.json());
   }
 
 
