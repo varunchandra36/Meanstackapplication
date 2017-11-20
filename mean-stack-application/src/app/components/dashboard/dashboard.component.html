@@ -1,0 +1,51 @@
+
+<!-- SIDEBAR -->
+<aside class="site-sidebar">
+  <div class="site-sidebar-bg"></div>
+
+  <div class="site-sidebar-inner">
+    <a href="/" class="person">
+      <div class="person-avatar">
+        <img src="/assets/IMG_3609.jpg" alt="" class="img-rounded">
+      </div>
+      <div class="person-content">
+        <h1 class="person-title"><strong>Dashboard</strong></h1>
+        <h2 class="person-subtitle">Select the 📰  Channel to Proceed ⏩</h2>
+      </div>
+    </a>
+<hr>
+    <nav class="block main-navigation">
+
+      <div class="navigation-extendable">
+        <ul>
+          <li class="" ><a routerLink="#" (click)="loadNews('business')">Business</a></li>
+          <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('entertainment')" >Entertainment</a></li>
+          <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('gaming')">Gaming</a></li>
+          <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('general')">General</a></li>
+          <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('sports')">Sports</a></li>
+          <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('technology')">Technology</a></li>
+            <li class="" ><a routerLink="/skills-and-offer" (click)="loadNews('science')">Science</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</aside>
+
+
+<hr/>
+<div class="news-channel">
+  <div class="row">
+    <div *ngIf = "newsJson">
+      <div *ngFor = "let channel of newsJson.sources">
+        <div class="col-md-3 " >
+          <div class="well channel" style="height: 100px">
+            <h1 class="btn btn-block btn-warning" [routerLink] = "['/newsfeed', channel.id]">{{channel.name}}</h1>
+            <p class="text-justify" style="font-size: x-small">{{channel.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>
+<br/>
